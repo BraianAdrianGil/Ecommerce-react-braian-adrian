@@ -20,6 +20,7 @@
   list-style: none;
 }
 .header__log__out__button__container {
+  background-color: white;
   border: none;
   cursor: pointer;
 }

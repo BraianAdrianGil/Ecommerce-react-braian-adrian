@@ -52,6 +52,7 @@ export const startSessionThunk =
   ({ email, password }) =>
   async (dispatch) => {
     const res = await login({ email, password });
+
     const userData = {
       id: res.user.id,
       fullName: `${res.user.firstName} ${res.user.lastName}`,

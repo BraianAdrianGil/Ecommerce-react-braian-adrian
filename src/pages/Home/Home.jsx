@@ -53,7 +53,7 @@ const Home = () => {
         <ProductList title={title} categories={categories} />
       </section>
       {/*Custom hook to do top scroll */}
-      <button onClick={useScrollTop} className="start__fixed__button">
+      <button onClick={useScrollTop} className="start__fixed__button__home">
         <i className="bx bx-chevrons-up bx-flashing"></i>
       </button>
     </div>

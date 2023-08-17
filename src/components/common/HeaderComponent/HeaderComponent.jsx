@@ -7,7 +7,7 @@ import "./HeaderComponent.css";
 const HeaderComponent = ({ handleCartVisible, isCartVisible }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const isLogged = useSelector((store) => store.auth.isLogged);
+  const { isLogged } = useSelector((store) => store.auth);
   const userTo = isLogged ? "/profile" : "/login";
   const { data } = useCart();
 
@@ -45,9 +45,11 @@ const HeaderComponent = ({ handleCartVisible, isCartVisible }) => {
             to="#"
           >
             <i className="bx bx-cart header__list__item">
-              <div className="header__cart__icon__total__container">
-                <span>{data?.length ?? 0}</span>
-              </div>
+              {isLogged && (
+                <div className="header__cart__icon__total__container">
+                  <span>{data?.length ?? 0}</span>
+                </div>
+              )}
             </i>
           </NavLink>
         </li>
