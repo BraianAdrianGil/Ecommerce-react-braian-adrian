@@ -78,6 +78,7 @@
   cursor: pointer;
 }
 .product__cart__remove__button__general__container button i {
+  background-color: white;
   color: #f85555;
   font-size: 20px;
   scale: 1;
