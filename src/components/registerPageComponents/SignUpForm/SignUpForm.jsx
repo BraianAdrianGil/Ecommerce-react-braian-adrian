@@ -16,6 +16,7 @@ const SignUpForm = ({ onSendDataRegister }) => {
     password: "",
     phone: "",
   });
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleInputsChange = (e) => {
     const { name, value } = e.target;
@@ -70,17 +71,26 @@ const SignUpForm = ({ onSendDataRegister }) => {
             required
           />
         </div>
-        <div className="sign__up__form__input__general__container">
+        <div className="sign__up__form__input__general__container ">
           <label htmlFor={signUpInputPasswordId}>Password</label>
-          <input
-            type="password"
-            name="password"
-            placeholder="xxx-xxx-xxx"
-            id={signUpInputPasswordId}
-            value={FormData.password}
-            onChange={handleInputsChange}
-            required
-          />
+          <div className="sign__up__form__password__container">
+            <input
+              type={showPassword ? "text" : "password"}
+              name="password"
+              placeholder="xxx-xxx-xxx"
+              id={signUpInputPasswordId}
+              value={FormData.password}
+              onChange={handleInputsChange}
+              required
+            />
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              name="toggleButton"
+            >
+              <i className="bx bx-show"></i>
+            </button>
+          </div>
         </div>
         <div className="sign__up__form__input__general__container">
           <label htmlFor={signUpInputPhoneId}>Phone (10 characters)</label>
