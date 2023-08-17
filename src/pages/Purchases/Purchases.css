@@ -21,6 +21,7 @@
 }
 .purchase__product__card__general__container {
   padding: 10px 0 10px 0;
+  padding-left: 5px;
   width: 100%;
   display: flex;
   justify-content: space-between;
