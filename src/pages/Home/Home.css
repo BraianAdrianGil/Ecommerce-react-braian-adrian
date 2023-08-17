@@ -3,6 +3,7 @@
   display: grid;
   justify-items: center;
   align-items: center;
+  overflow: hidden;
 }
 .home__general__container aside {
   width: 100%;
