@@ -1,0 +1,104 @@
+.product__card__item__container {
+  padding-top: 2.5rem;
+  margin-bottom: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  position: relative;
+}
+.loader__container__cart__product {
+  position: relative;
+  top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+}
+.product__cart__img__container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 25%;
+}
+.product__cart__img__container img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  object-position: center;
+}
+.product__cart__quantity__container {
+  padding: 0 10px;
+  width: 167px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.product__cart__quantity__container span {
+  font-size: 14.4px;
+  padding-bottom: 1rem;
+  padding-left: 0.5rem;
+}
+.product__cart__buttons__general__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(128, 128, 128, 0.571);
+}
+.product__cart__buttons__general__container span {
+  display: inline-block;
+  padding: 2px 12px;
+  aspect-ratio: 1;
+  text-align: center;
+  line-height: 36px;
+  border-left: 1px solid rgba(128, 128, 128, 0.971);
+  border-right: 1px solid rgba(128, 128, 128, 0.645);
+}
+.product__cart__buttons__general__container button {
+  border: none;
+  width: 30px;
+  height: 15px;
+  text-align: center;
+  font-size: 16px;
+  color: rgb(108, 105, 105);
+  cursor: pointer;
+}
+.product__cart__remove__button__general__container {
+  width: 16px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product__cart__remove__button__general__container button {
+  border: none;
+  cursor: pointer;
+}
+.product__cart__remove__button__general__container button i {
+  color: #f85555;
+  font-size: 20px;
+  scale: 1;
+  transition: scale 0.3s ease;
+}
+.product__cart__remove__button__general__container button i:hover {
+  scale: 1.5;
+  transition: 0.3s ease;
+}
+.xcxcx {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 1px solid gray;
+}
+.sdsdsd {
+  margin-top: 5rem;
+  margin-bottom: 1.7rem;
+  display: flex;
+}
+.updateCart {
+  z-index: 1;
+}

@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.app__header {
+  width: 100%;
+  z-index: 2;
+  box-shadow: 1px 1px 12px gray;
+  position: fixed;
+  top: 0;
+}
+/* .app__header {
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  box-shadow: 1px 0px 12px gray;
+} */
+.app__main {
+  margin-top: 5rem;
+}

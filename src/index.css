@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Yantramanav", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}

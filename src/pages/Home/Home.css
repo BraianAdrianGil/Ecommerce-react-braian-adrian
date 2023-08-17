@@ -1,0 +1,106 @@
+.home__general__container {
+  padding-top: 0.5rem;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+.home__general__container aside {
+  width: 100%;
+  max-width: 385px;
+  padding: 0 20px 0 20px;
+}
+.home__form__general__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home__form__general__container div {
+  padding: 0 20px 0 20px;
+  min-width: 320px;
+  max-width: 390px;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home__form__general__container input {
+  width: 100%;
+  padding: 8px 0 8px 4px;
+  border: 1px solid rgba(0, 0, 0, 0.489);
+  height: 30px;
+  border-radius: 5px 0 0 5px;
+  font-size: 16px;
+}
+.home__form__general__container input:focus {
+  outline: #f55555 1px solid;
+}
+.home__form__general__container button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: #f55555;
+  color: white;
+  padding: 8px;
+  border-radius: 0 5px 5px 0px;
+  outline: none;
+}
+.home__form__general__container button i {
+  font-size: 14px;
+  font-weight: bold;
+  scale: 1;
+  transition: scale 0.5s ease;
+}
+.start__fixed__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  border: none;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  z-index: 2;
+  cursor: pointer;
+  border-radius: 5px 5px 0 0;
+}
+.start__fixed__button i {
+  font-size: 25px;
+}
+
+/* Media queries================================= */
+@media screen and (min-width: 782px) {
+  .home__general__container {
+    display: grid;
+    justify-items: unset;
+    align-items: unset;
+    grid-template-columns: minmax(10%, 200px) 1fr;
+  }
+  .home__general__container aside {
+    width: 100%;
+    max-width: 320px;
+    padding: 0 0 0 20px;
+  }
+  .home__form__general__container input {
+    padding: 8px 0 8px 4px;
+    height: 35px;
+  }
+  .home__form__general__container button {
+    height: 35px;
+    background-color: #f55555;
+    color: white;
+    padding: 10px;
+  }
+  .home__form__general__container button i {
+    font-size: 18px;
+  }
+  .start__fixed__button {
+    bottom: 0;
+    left: 50%;
+  }
+  .start__fixed__button i {
+    font-size: 35px;
+  }
+}

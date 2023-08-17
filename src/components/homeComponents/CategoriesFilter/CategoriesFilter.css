@@ -1,0 +1,51 @@
+.loader__container__categories {
+  position: absolute;
+}
+.categories__filter__general__container {
+  padding-top: 0.5rem;
+  height: 220px;
+  transition: 0.5s linear;
+  overflow: hidden;
+  border: none;
+  outline: none;
+}
+.categories__filter__hide__general__container {
+  overflow: hidden;
+  height: 0px;
+  transition: 0.5s linear;
+  border: none;
+  outline: none;
+}
+.legend {
+  cursor: pointer;
+}
+.bx-chevron-up {
+  cursor: pointer;
+}
+.categories__arrow__up {
+  font-size: 22px;
+  transition: 0.5s linear;
+}
+.categories__arrow__down {
+  font-size: 22px;
+  transform: rotate(180deg);
+  transition: transform 0.5s ease;
+}
+
+.check__box__cursor__pointer {
+  cursor: pointer;
+  margin-top: 1rem;
+}
+.categories__inputs__general__container {
+  display: flex;
+}
+/* MEDIA QUERIES */
+@media screen and (min-width: 782px) {
+  .legend {
+    font-size: 18px;
+  }
+  .categories__filter__general__container label,
+  .categories__filter__hide__general__container label {
+    font-size: 18px;
+  }
+}

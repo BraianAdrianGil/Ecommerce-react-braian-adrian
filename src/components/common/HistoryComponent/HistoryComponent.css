@@ -1,0 +1,19 @@
+.history__general__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+.history__navlink {
+  text-decoration: none;
+  color: #515151;
+  font-size: 16px;
+}
+.history__general__container i {
+  font-size: 6px;
+}
+.history__general__container b {
+  color: #515151;
+  font-size: 16px;
+}

@@ -1,0 +1,63 @@
+.login__form__general__container {
+  margin-top: 0.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.login__email__container,
+.login__password__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 17px;
+  color: #343131;
+}
+.login__email__container label,
+.login__password__container label {
+  margin-bottom: 0.1rem;
+}
+.login__email__container input,
+.login__password__container input {
+  padding: 5px;
+  width: 100%;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.358);
+  border-radius: 3px;
+}
+.login__email__container input:focus,
+.login__password__container input:focus {
+  outline: 1px solid #f55555;
+}
+.login__password__container div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+.login__password__container div button {
+  position: absolute;
+  top: 6px;
+  right: 5px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+.login__form__submit__btn {
+  font-size: 16px;
+  padding: 9px;
+  background-color: #f55555;
+  border: none;
+  color: white;
+  scale: 1;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.login__form__submit__btn:hover {
+  scale: 1.1;
+  transition: 0.5s ease;
+}

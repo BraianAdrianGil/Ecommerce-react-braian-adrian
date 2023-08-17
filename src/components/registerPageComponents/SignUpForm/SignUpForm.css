@@ -1,0 +1,41 @@
+.sign__up__form__general__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 300px;
+  gap: 0.5rem;
+}
+.sign__up__form__input__general__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sign__up__form__input__general__container label {
+  margin-bottom: 0.1rem;
+  font-size: 17px;
+  color: #343131;
+}
+.sign__up__form__input__general__container input {
+  padding: 5px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.358);
+  border-radius: 3px;
+}
+.sign__up__form__input__general__container input:focus {
+  outline-color: #f55555;
+}
+.sign__up__form__btn {
+  font-size: 16px;
+  padding: 9px;
+  background-color: #f55555;
+  border: none;
+  color: white;
+  scale: 1;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.sign__up__form__btn:hover {
+  scale: 1.1;
+  transition: 0.5s ease;
+}

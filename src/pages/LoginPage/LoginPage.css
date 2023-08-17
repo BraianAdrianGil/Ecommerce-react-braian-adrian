@@ -1,0 +1,57 @@
+.login__page__general__container {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.login__page__general__container > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 300px;
+  gap: 1rem;
+}
+.login__page__general__container div h2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 22px;
+  color: #5e5c5c;
+}
+.login__page__general__container div h2 span {
+  color: #f55555;
+}
+.login__page__test__data__general__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(135, 207, 235, 0.423);
+  padding: 15px;
+}
+.login__page__test__data__general__container h4 {
+  color: #444444;
+}
+.login__page__test__data__general__container ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.login__page__test__data__general__container ul li span:first-of-type {
+  margin-right: 0.5rem;
+}
+.login__page__test__data__general__container ul li span:nth-child(2) {
+  color: #444444;
+}
+.login__sign__up__container {
+  margin-top: 0.5rem;
+
+  font-size: 14px;
+}
+.login__sign__up__container__link {
+  color: #44a2d1;
+  font-weight: bolder;
+}
