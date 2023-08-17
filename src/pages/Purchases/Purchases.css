@@ -79,7 +79,7 @@
   bottom: 0;
   border: none;
   color: white;
-  z-index: 2;
+  z-index: 1;
   cursor: pointer;
   background-color: rgba(2, 2, 2, 0.282);
 }
