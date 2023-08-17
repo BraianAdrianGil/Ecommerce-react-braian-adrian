@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from "react-redux";
 import LoginForm from "../../components/loginPageComponents/LoginForm";
 import { startSessionThunk } from "../../store/slices/authSlice";
 import { Link, Navigate, useLocation } from "react-router-dom";
-import { useState } from "react";
 import "./LoginPage.css";
 
 const LoginPage = () => {
@@ -11,14 +10,8 @@ const LoginPage = () => {
   const from = location.state?.from ?? "/";
   const isLogged = useSelector((store) => store.auth.isLogged);
 
-  const [invalidCredentials, setInvalidCredentials] = useState("");
-
   const handleLogin = async (loginData) => {
     dispatch(startSessionThunk(loginData));
-    if (!isLogged) setInvalidCredentials("❌ Invalid Credentials");
-    else {
-      setInvalidCredentials("");
-    }
   };
 
   return (
@@ -51,13 +44,7 @@ const LoginPage = () => {
           </Link>
         </span>
       </p>
-      {isLogged ? (
-        <Navigate to={from ?? "/"} />
-      ) : (
-        <p className={invalidCredentials ? "invalid__credentials" : ""}>
-          {invalidCredentials}
-        </p>
-      )}
+      {isLogged && <Navigate to={from ?? "/"} />}
       {/* Nullish operator porque puede venir null o undefined el location */}
     </section>
   );
