@@ -46,7 +46,7 @@ const HeaderComponent = ({ handleCartVisible, isCartVisible }) => {
           >
             <i className="bx bx-cart header__list__item">
               <div className="header__cart__icon__total__container">
-                <span>{data.length ?? 0}</span>
+                <span>{data?.length ?? 0}</span>
               </div>
             </i>
           </NavLink>
