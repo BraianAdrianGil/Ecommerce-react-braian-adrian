@@ -9,7 +9,7 @@ const ProductList = ({ title, categories, excludeProductId }) => {
   const { data, isLoading, isError } = useProducts(title, categories);
   if (isLoading)
     return (
-      <div className="loader__container">
+      <div className="loader__container loader__container__home">
         <span className="loader"></span>
       </div>
     );
