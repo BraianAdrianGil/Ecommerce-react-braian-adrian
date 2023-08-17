@@ -17,6 +17,8 @@ const Purchases = () => {
     return formatedDate;
   };
 
+  useScrollTop();
+
   if (isLoading)
     return (
       <div className="loader__container">
