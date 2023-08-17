@@ -8,6 +8,7 @@ import { useCart } from "../../hooks/queries/useCart";
 import { useUpdateCart } from "../../hooks/queries/useUpdateCart";
 import HistoryComponent from "../../components/common/HistoryComponent/HistoryComponent";
 import "./ProductDetail.css";
+import { useScrollTop } from "../../hooks/scroll/useScrollTop";
 
 const ProductDetail = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -71,12 +72,15 @@ const ProductDetail = () => {
     setCurrentIndex(index);
   };
 
+  useScrollTop();
+
   if (isLoading)
     return (
       <div className="loader__container">
         <span className="loader"></span>
       </div>
     );
+
   if (isError) return <p>{error.message ?? "Couldn't load product"}</p>;
 
   return (
