@@ -71,8 +71,11 @@ const ProductDetail = () => {
   const handleImagePreviewClick = (index) => {
     setCurrentIndex(index);
   };
+  const scroll = useScrollTop();
 
-  useScrollTop();
+  useEffect(() => {
+    scroll();
+  }, []);
 
   if (isLoading)
     return (
@@ -147,13 +150,9 @@ const ProductDetail = () => {
                 <div className="product__description__quantity">
                   <span>Quantity</span>
                   <div>
-                    <button type="text" onClick={minus}>
-                      -
-                    </button>
+                    <button onClick={minus}>-</button>
                     <span className="product__quantity">{quantity}</span>
-                    <button type="text" onClick={plus}>
-                      +
-                    </button>
+                    <button onClick={plus}>+</button>
                   </div>
                 </div>
               </div>
