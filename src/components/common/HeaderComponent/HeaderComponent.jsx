@@ -12,6 +12,7 @@ const HeaderComponent = ({ handleCartVisible, isCartVisible }) => {
   const { data } = useCart();
 
   const handleLogout = () => {
+    if (isCartVisible) handleCartVisible();
     dispatch(reset());
     navigate("/login");
   };
