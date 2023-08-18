@@ -147,9 +147,13 @@ const ProductDetail = () => {
                 <div className="product__description__quantity">
                   <span>Quantity</span>
                   <div>
-                    <button onClick={minus}>-</button>
+                    <button type="text" onClick={minus}>
+                      -
+                    </button>
                     <span className="product__quantity">{quantity}</span>
-                    <button onClick={plus}>+</button>
+                    <button type="text" onClick={plus}>
+                      +
+                    </button>
                   </div>
                 </div>
               </div>
