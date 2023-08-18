@@ -71,11 +71,6 @@ const ProductDetail = () => {
   const handleImagePreviewClick = (index) => {
     setCurrentIndex(index);
   };
-  const scroll = useScrollTop();
-
-  useEffect(() => {
-    scroll();
-  }, []);
 
   if (isLoading)
     return (
