@@ -8,7 +8,6 @@ import { useCart } from "../../hooks/queries/useCart";
 import { useUpdateCart } from "../../hooks/queries/useUpdateCart";
 import HistoryComponent from "../../components/common/HistoryComponent/HistoryComponent";
 import "./ProductDetail.css";
-import { useScrollTop } from "../../hooks/scroll/useScrollTop";
 
 const ProductDetail = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -71,6 +70,10 @@ const ProductDetail = () => {
   const handleImagePreviewClick = (index) => {
     setCurrentIndex(index);
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   if (isLoading)
     return (
