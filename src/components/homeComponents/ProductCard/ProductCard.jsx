@@ -14,7 +14,7 @@ const ProductCard = ({ productData }) => {
     (cartProduct) => cartProduct.product.id === productData.id
   );
 
-  const isAddToCartBtnVisible = !isLogged || !isProductInCart;
+  const isAddToCartBtnVisible = !isLogged || (isLogged && !isProductInCart);
 
   const handleAddProductToCartButton = (e) => {
     e.preventDefault();
