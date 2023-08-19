@@ -45,7 +45,7 @@ const Home = () => {
               value={searchTitleValue}
               onChange={(e) => setSearchTitleValue(e.target.value)}
             />
-            <button>
+            <button aria-label="Search product">
               <i className="bx bx-search-alt-2"></i>
             </button>
           </div>

@@ -53,6 +53,7 @@ const ProductCard = ({ productData }) => {
           onClick={handleAddProductToCartButton}
           className="product__add__button"
           disabled={isLoading}
+          aria-label="Add product to cart"
         >
           <i className="bx bxs-cart-add"></i>
         </button>
