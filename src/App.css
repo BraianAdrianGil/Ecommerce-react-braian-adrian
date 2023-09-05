@@ -7,9 +7,7 @@
 *::after {
   box-sizing: border-box;
 }
-.App {
-  height: 100vh;
-}
+
 .app__header {
   width: 100%;
   z-index: 2;

@@ -15,7 +15,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div>
       <header className="app__header">
         <div style={{ position: "relative" }}>
           <HeaderComponent
