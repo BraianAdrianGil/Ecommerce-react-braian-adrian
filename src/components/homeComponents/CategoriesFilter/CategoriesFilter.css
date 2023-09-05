@@ -8,9 +8,6 @@
   overflow: hidden;
   border: none;
   outline: none;
-  position: fixed;
-  left: 1.25rem;
-  top: 5.5rem;
 }
 .categories__filter__hide__general__container {
   overflow: hidden;
@@ -18,9 +15,6 @@
   transition: 0.5s linear;
   border: none;
   outline: none;
-  position: fixed;
-  left: 1.25rem;
-  top: 5.5rem;
 }
 .legend {
   cursor: pointer;
@@ -46,6 +40,19 @@
   display: flex;
 }
 /* MEDIA QUERIES */
+@media screen and (min-width: 700px) {
+  .categories__filter__general__container {
+    position: fixed;
+    left: 1.25rem;
+    top: 5.5rem;
+  }
+  .categories__filter__hide__general__container {
+    position: fixed;
+    left: 1.25rem;
+    top: 5.5rem;
+  }
+}
+/* 782PX========================================= */
 @media screen and (min-width: 782px) {
   .legend {
     font-size: 18px;
