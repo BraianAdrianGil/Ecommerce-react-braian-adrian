@@ -5,19 +5,27 @@ const FooterComponent = () => {
     <div className="footer__component__general__container">
       <ul className="footer__component__items__general__container">
         <li className="footer__item">
-          <a href="">
+          <a
+            href="https://github.com/BraianAdrianGil"
+            target="_blank"
+            rel="noreferrer"
+          >
             <i className="bx bxl-github" style={{ color: "black" }}></i>
           </a>
         </li>
         <li className="footer__item">
-          <a href="">
+          <a
+            href="https://www.linkedin.com/in/braian-adrian-gil-gagliardo-a10042266/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <i
               className="bx bxl-linkedin-square"
               style={{ color: "#4f98d5" }}
             ></i>
           </a>
         </li>
-        <li className="footer__item">
+        <li className="footer__item" target="_blank" rel="noreferrer">
           <a href="https://api.whatsapp.com/send?phone=+598098604405&text=MENSAJE_DE_TEXTO">
             <i
               className="bx bxl-whatsapp"
