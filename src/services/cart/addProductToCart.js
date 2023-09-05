@@ -7,7 +7,7 @@ export const addProductToCart = async ({ token, quantity, productId }) => {
   };
 
   try {
-    await axiosInstance.post("/cart/", body, {
+    await axiosInstance.post("/cart", body, {
       headers: { Authorization: `Bearer ${token}` },
     });
   } catch (error) {

@@ -40,7 +40,7 @@ const CategoriesFilter = ({
     ? "bx bx-chevron-up categories__arrow__up"
     : "bx bx-chevron-up categories__arrow__down";
 
-  const maxheight = rotateCategoryArrow
+  const showCategories = rotateCategoryArrow
     ? "categories__filter__general__container"
     : "categories__filter__hide__general__container";
 
@@ -57,11 +57,11 @@ const CategoriesFilter = ({
     );
   if (isError) return <p>{error.message ?? "Couldn't load categories"}</p>;
   if (data.length === 0)
-    return <p>{error.message ?? "There is no categories"}</p>;
+    return <p>{error?.message ?? "There is no categories"}</p>;
 
   return (
     //Fieldset es una etiqueta parecida al form pero se usa para encerrar un conjunto de inputs, y todos los fieldset deben tener el atributo form que es para saber a que formulario hace referencia . Ademas debe tener la etiqueta legend
-    <fieldset form={formId} className={maxheight}>
+    <fieldset form={formId} className={showCategories}>
       <legend
         className="legend"
         onClick={() => setRotateCategoryArrow(!rotateCategoryArrow)}

@@ -6,10 +6,14 @@ import "./CartProduct.css";
 
 const CartProduct = ({ cartProduct }) => {
   const initialQuantity = Number(cartProduct.quantity);
-  const price = Number(cartProduct.product.price);
+  const price = Number(cartProduct.product?.price);
   const deleteQueryMutation = useDeleteProductFromCart();
   const [quantity, setQuantity] = useState(initialQuantity);
   const { mutate, isLoading } = useUpdateCart();
+
+  const sortedImages = [...cartProduct.product.images]?.sort(
+    (a, b) => a.id - b.id
+  );
 
   const plus = () => {
     const newQuantity = quantity + 1;
@@ -39,6 +43,8 @@ const CartProduct = ({ cartProduct }) => {
       </div>
     );
 
+  if (cartProduct.length < 0) return;
+  console.log(cartProduct);
   return (
     <>
       <div className="xcxcx">
@@ -47,13 +53,17 @@ const CartProduct = ({ cartProduct }) => {
             className="product__cart__img__container"
             to={`/product/${cartProduct.productId}`}
           >
-            <div>
-              <img src={cartProduct.product.images[0].url} alt="" />
-            </div>
+            {cartProduct.product.images.length > 0 ? (
+              <div>
+                <img src={sortedImages[0].url} alt="" />
+              </div>
+            ) : (
+              <p>Image not available</p>
+            )}
           </NavLink>
 
           <div className="product__cart__quantity__container">
-            <span>{cartProduct.product.title}</span>
+            <span>{cartProduct.product?.title}</span>
 
             <div className="product__cart__buttons__general__container">
               <button onClick={minus}>

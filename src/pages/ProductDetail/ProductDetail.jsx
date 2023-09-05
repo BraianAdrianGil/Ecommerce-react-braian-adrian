@@ -14,12 +14,12 @@ const ProductDetail = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   const updateCartProduct = useUpdateCart();
-  const { mutate } = useAddProductToCart();
+  const { mutate, isLoading: isLoadingAddProductToCart } =
+    useAddProductToCart();
   const { isLogged } = useSelector((store) => store.auth);
   //cart query lo hacemos asi porque ya tenemos una desustructuracion de una query y se llaman iguales las desustrucraciones entonces almacenamos todo en cart query
   const cartQuery = useCart();
   const { data, isLoading, isError, error } = useProductById(id);
-
   //Verificamos si el producto de product detail ya esta en el carrito, para mostrar add to cart o update in cart
   const isProductInCart =
     cartQuery.data?.some((cartProduct) => cartProduct.productId === data?.id) ??
@@ -157,7 +157,10 @@ const ProductDetail = () => {
 
               <div className="product__detail__add__update__button__general__container">
                 {!isProductInCart && (
-                  <button onClick={handleAddToCartDetailBtn} className="">
+                  <button
+                    onClick={handleAddToCartDetailBtn}
+                    disabled={isLoadingAddProductToCart}
+                  >
                     Add to cart <i className="bx bxs-cart-add"></i>
                   </button>
                 )}

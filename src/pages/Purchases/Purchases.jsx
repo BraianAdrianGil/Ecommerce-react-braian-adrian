@@ -46,10 +46,14 @@ const Purchases = () => {
               key={productInfo.id}
             >
               <div className="purchase__product__img__container">
-                <img
-                  src={productInfo.product.images[2].url}
-                  alt={productInfo.product.title}
-                />
+                {productInfo.product.images > 0 ? (
+                  <img
+                    src={productInfo.product.images[2].url}
+                    alt={productInfo.product.title}
+                  />
+                ) : (
+                  <p>Image not available</p>
+                )}
               </div>
 
               <div className="purchase__product__title">

@@ -33,6 +33,7 @@
   }
 }
 .product__card__first__img {
+  max-height: 100%;
   height: 80%;
   width: 78%;
   object-fit: contain;

@@ -8,6 +8,9 @@
   overflow: hidden;
   border: none;
   outline: none;
+  position: fixed;
+  left: 1.25rem;
+  top: 5.5rem;
 }
 .categories__filter__hide__general__container {
   overflow: hidden;
@@ -15,6 +18,9 @@
   transition: 0.5s linear;
   border: none;
   outline: none;
+  position: fixed;
+  left: 1.25rem;
+  top: 5.5rem;
 }
 .legend {
   cursor: pointer;

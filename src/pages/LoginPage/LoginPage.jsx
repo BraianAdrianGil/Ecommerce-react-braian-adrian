@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import LoginForm from "../../components/loginPageComponents/LoginForm";
 import { startSessionThunk } from "../../store/slices/authSlice";
 import { Link, Navigate, useLocation } from "react-router-dom";
+import { useState } from "react";
 import "./LoginPage.css";
 
 const LoginPage = () => {
@@ -9,13 +10,25 @@ const LoginPage = () => {
   const location = useLocation();
   const from = location.state?.from ?? "/";
   const isLogged = useSelector((store) => store.auth.isLogged);
+  const [loginError, setLoginError] = useState("");
 
   const handleLogin = async (loginData) => {
-    dispatch(startSessionThunk(loginData));
+    try {
+      setLoginError("");
+      await dispatch(startSessionThunk(loginData));
+    } catch (error) {
+      setLoginError(error.message);
+      setTimeout(() => {
+        setLoginError("");
+      }, 4000);
+    }
   };
 
   return (
     <section className="login__page__general__container ">
+      {loginError && (
+        <p className="login__invalid__credentials">❌ {loginError} !</p>
+      )}
       <div>
         <h2>
           <span>Welcome!</span> Enter your email and password to continue

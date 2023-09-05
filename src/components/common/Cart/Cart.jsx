@@ -11,8 +11,8 @@ const Cart = ({ isCartVisible }) => {
 
   //acc es acumular (sumar) en vez de sum seria acc.
   const reducer = (sum, data) => {
-    const quantity = Number(data.quantity);
-    const price = Number(data.product.price);
+    const quantity = Number(data?.quantity);
+    const price = Number(data?.product?.price ?? 0);
     return sum + quantity * price;
   };
   const total = data?.reduce(reducer, 0) ?? 0;

@@ -6,16 +6,17 @@ import "./ProductCard.css";
 
 const ProductCard = ({ productData }) => {
   const { isLogged } = useSelector((store) => store.auth);
-  const { data, isLoading } = useCart();
-  const { mutate } = useAddProductToCart();
+  const { data } = useCart();
+  const { mutate, isLoading } = useAddProductToCart();
   const navigate = useNavigate();
 
+  const sortedImages = [...productData.images]?.sort((a, b) => a.id - b.id);
+
   const isProductInCart = data?.some(
-    (cartProduct) => cartProduct.product.id === productData.id
+    (cartProduct) => cartProduct.product?.id === productData.id
   );
 
   const isAddToCartBtnVisible = !isLogged || (isLogged && !isProductInCart);
-
   const handleAddProductToCartButton = (e) => {
     e.preventDefault();
     if (!isLogged) navigate("/login");
@@ -25,18 +26,24 @@ const ProductCard = ({ productData }) => {
   return (
     <article className="product__card__general__container">
       <div className="product__card__img__general__container">
-        <img
-          src={productData.images[0].url}
-          alt={productData.title + " image 1"}
-          className="product__card__first__img"
-        />
-        <div>
-          <img
-            src={productData.images[1].url}
-            alt={productData.title + " image 2"}
-            className="product__card__second__img"
-          />
-        </div>
+        {productData.images[2]?.url && productData.images[1]?.url ? (
+          <>
+            <img
+              src={sortedImages[0].url}
+              alt={productData.title + " image 1"}
+              className="product__card__first__img"
+            />
+            <div>
+              <img
+                src={productData.images[1].url}
+                alt={productData.title + " image 2"}
+                className="product__card__second__img"
+              />
+            </div>
+          </>
+        ) : (
+          <p>Image not available</p>
+        )}
       </div>
 
       <section className="product__card__info">
