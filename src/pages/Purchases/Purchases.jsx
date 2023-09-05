@@ -46,9 +46,9 @@ const Purchases = () => {
               key={productInfo.id}
             >
               <div className="purchase__product__img__container">
-                {productInfo.product.images > 0 ? (
+                {productInfo.product.images.length > 0 ? (
                   <img
-                    src={productInfo.product.images[2].url}
+                    src={productInfo.product.images[0].url}
                     alt={productInfo.product.title}
                   />
                 ) : (
