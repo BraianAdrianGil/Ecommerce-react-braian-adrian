@@ -11,7 +11,7 @@
   width: 100%;
   z-index: 2;
   box-shadow: 1px 1px 12px gray;
-  position: fixed;
+  position: sticky;
   top: 0;
 }
 /* .app__header {
@@ -22,6 +22,5 @@
   box-shadow: 1px 0px 12px gray;
 } */
 .app__main {
-  margin-top: 5rem;
   font-family: "Yantramanav", sans-serif;
 }

@@ -1,10 +1,14 @@
+import { useEffect } from "react";
 import HistoryComponent from "../../components/common/HistoryComponent/HistoryComponent";
 import { useLoggedUser } from "../../hooks/queries/useLoggedUser";
 import "./Profile.css";
 
 const Profile = () => {
   const { data, isLoading, isError, error } = useLoggedUser();
-  console.log(data);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (isError) return <p>{error.response.message}</p>;
 
