@@ -1,4 +1,5 @@
 .home__general__container {
+  position: relative;
   margin-top: 1.5rem;
   padding-top: 0.5rem;
   display: grid;
@@ -56,12 +57,11 @@
   transition: scale 0.5s ease;
 }
 .start__fixed__button__home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
+  position: sticky;
   bottom: 0;
+  right: 50%;
   left: 50%;
+  transform: translate(-50%, 0%);
   width: 35px;
   aspect-ratio: 1;
   border: none;
@@ -100,10 +100,6 @@
   }
   .home__form__general__container button i {
     font-size: 18px;
-  }
-  .start__fixed__button {
-    bottom: 0;
-    left: 50%;
   }
   .start__fixed__button i {
     font-size: 35px;

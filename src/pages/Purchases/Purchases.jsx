@@ -77,15 +77,12 @@ const Purchases = () => {
             <div style={{ width: "100%" }}>
               <hr />
             </div>
-            <button
-              onClick={useScrollTop}
-              className="start__fixed__button__purchase"
-            >
-              <i className="bx bx-chevrons-up bx-flashing"></i>
-            </button>
           </>
         ))}
       </section>
+      <button onClick={useScrollTop} className="start__fixed__button__purchase">
+        <i className="bx bx-chevrons-up bx-flashing"></i>
+      </button>
     </section>
   );
 };
