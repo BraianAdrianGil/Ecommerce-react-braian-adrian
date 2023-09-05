@@ -44,7 +44,6 @@ const CartProduct = ({ cartProduct }) => {
     );
 
   if (cartProduct.length < 0) return;
-  console.log(cartProduct);
   return (
     <>
       <div className="xcxcx">

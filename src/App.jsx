@@ -4,6 +4,7 @@ import Cart from "./components/common/Cart/Cart";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import "./App.css";
+import FooterComponent from "./components/common/FooterComponent/FooterComponent";
 
 function App() {
   const { isLogged } = useSelector((store) => store.auth);
@@ -14,7 +15,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="App">
       <header className="app__header">
         <div style={{ position: "relative" }}>
           <HeaderComponent
@@ -28,7 +29,7 @@ function App() {
         <Outlet />
       </main>
       <footer>
-        <div></div>
+        <FooterComponent />
       </footer>
     </div>
   );
