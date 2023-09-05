@@ -47,7 +47,7 @@
   width: 19%;
 }
 .purchase__product__img__container img {
-  max-width: 100%;
+  max-width: 85px;
   min-width: 50px;
   min-height: 60px;
   max-height: 60px;
