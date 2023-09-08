@@ -23,5 +23,6 @@
   box-shadow: 1px 0px 12px gray;
 } */
 .app__main {
+  height: 100%;
   font-family: "Yantramanav", sans-serif;
 }
