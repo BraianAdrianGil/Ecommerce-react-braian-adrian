@@ -6,6 +6,7 @@
   justify-items: center;
   align-items: center;
   overflow: hidden;
+  height: 100vh;
 }
 .home__general__container aside {
   width: 100%;
