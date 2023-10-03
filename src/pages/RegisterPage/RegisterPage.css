@@ -1,13 +1,12 @@
 .register__general__container {
-  margin-top: 2rem;
   width: 100%;
   padding: 8px 16px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 1rem;
-  height: 72.2vh;
+  height: calc(100vh - 166px);
 }
 .register__general__container span {
   color: #f55555;
@@ -27,3 +26,16 @@
   color: #44a2d1;
   font-weight: bolder;
 }
+
+@media screen and (min-width:425px){
+  .register__general__container {
+    height: calc(100vh - 172px);
+  }
+}
+
+@media screen and (min-width:768px){
+  .register__general__container {
+   
+    height: calc(100vh - 177px);
+  }
+} 
